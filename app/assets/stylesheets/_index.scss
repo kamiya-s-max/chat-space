@@ -110,6 +110,33 @@ $main-font-color: #434A54;
     width: calc( 100vw - 300px) ;
     float: right;
     background-color: #fafafa;
-    
+    &--body {
+      padding: 46px 40px 40px 40px;
+      width: 100%;
+      
+      .body-title {
+        padding-bottom: 10px;
+        font-size: 16px;
+        float: left;
+        font-weight: bold;
+        color: $main-font-color;
+        
+      }
+      .body-message {
+        padding-left: 10px;
+        font-size: 12px;
+        display: inline-block;
+        color: #999999
+      }
+      .body-text {
+        font-size: 14px;
+        clear: both;
+        float: left;
+        color: $main-font-color;
+      }
+    }
+    .footer {
+      
+    }
   }
 }
