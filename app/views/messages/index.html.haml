@@ -1,24 +1,46 @@
 .header
-  .header__title
-    max
-  .header__list
-    .header__list-heding
-      member:
-    .header__list-
-  .header__btn
-.contents
-  .contents__side
-    .contents__side--head
-      .contents__side--head-title
-      .contents__side--head-btn
-      .contents__side--head-btn
-    .contents__side--body
-      .contents__side--body-btn
-  .contents__main
-    .contents__main--body
-      .contents__main--body-lead
-      .contents__main--body-text
-  .contents__bottom
-    .contents__bottom-form
-    .contents__bottom-btn-small
-    .contents__bottom-btn-large
+  .header__left
+    .header__left--title
+      kamiya-s-max
+    =link_to "", class: "header__left--btn-cog" do
+      = fa_icon 'cog inverse'
+    =link_to "", class: "header__left--btn-edit" do
+      = fa_icon 'edit inverse'
+  .header__right
+    .header__right--title
+      max
+    .header__right--text
+      Member : 
+    .header__right--list
+      asd kamiya-s-max
+    =link_to "", class: "header__right--btn" do
+      Edit
+-# .contents
+-#   .contents__side
+-#     .contents__side--btn
+-#   .contents__main
+-#     .contents__main--body
+-#       .body_title
+-#       .body_message
+-#       .body_text
+-#     .footer
+
+
+
+
+-# .contents
+-#   .contents__side
+-#     .contents__side--head
+-#       .contents__side--head-title
+-#       .contents__side--head-btn
+-#       .contents__side--head-btn
+-#     .contents__side--body
+-#       .contents__side--body-btn
+-#   .contents__main
+-#     .contents__main--body
+-#       .contents__main--body-lead
+-#       .contents__main--body-text
+-#   .contents__bottom
+-#     .contents__bottom-form
+-#     .contents__bottom-btn-small
+-#     .contents__bottom-btn-large

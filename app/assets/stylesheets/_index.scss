@@ -1,0 +1,66 @@
+.header {
+  background-color: #253141;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  &__left {
+    background-color: #253141;
+    width: 300px;
+    float: left;
+    margin-top: 38px;
+    &--title {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #FFFFFF;
+      margin-left: 20px;
+    }
+    &--btn-cog {
+      float: right;
+      margin-right: 20px;
+    }
+    &--btn-edit {
+      float: right;
+      margin-right: 5px;
+    }
+  }
+  &__right {
+    background-color: white;
+    width: calc(100vw - 300px);
+    float: right;
+    border-bottom: solid 1px #eeeeee;
+    position: relative;
+    &--title {
+      font-size: 20px;
+      padding-top: 35px;
+      color: #333333;
+      padding-left: 40px;
+    }
+    &--text {
+      float: left;
+      font-size: 12px;
+      padding-top: 15px;
+      color: #999999;
+      padding-left: 40px;
+    }
+    &--list {
+      float: left;
+      font-size: 12px;
+      padding-top: 15px;
+      color: #999999;
+    }
+    &--btn {
+      position: absolute;
+      top: 28px;
+      right: 40px;
+      display: inline-block;
+      text-decoration: none;
+      color: #67c5ff;
+      border: solid 1px #67c5ff;
+      height: 40px;
+      padding: 0 20px;
+      line-height: 40px;
+    }
+
+  }
+}
