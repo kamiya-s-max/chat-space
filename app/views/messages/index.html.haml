@@ -2,13 +2,7 @@
   .notice
     グループを作成しました
 .header
-  .header__left
-    .header__left--title
-      kamiya-s-max
-    =link_to "", class: "header__left--btn-cog" do
-      = fa_icon 'cog inverse'
-    =link_to "", class: "header__left--btn-edit" do
-      = fa_icon 'edit inverse'
+  = render 'header-left'
   .header__right
     .header__right--title
       max
@@ -19,17 +13,7 @@
     =link_to "", class: "header__right--btn" do
       Edit
 .contents
-  .contents__side
-    =link_to "", class: "contents__side--btn" do
-      .message--top
-        max
-      .message--bottom
-        まだメッセージはありません
-    =link_to "", class: "contents__side--btn" do
-      .message--top
-        max
-      .message--bottom
-        まだメッセージはありません
+  = render 'contents-side'
   .contents__main
     .contents__main--body
       .body--title
@@ -40,7 +24,6 @@
         テスト
     .contents__main--form
       .input-box
-        -# %input.input-box__text{:placeholder => "type a message"}
         %label.input-box__image(for="message_image")
           %i{class:"fa fa-lg fa-image"}
           %input.input-box__image-file{:type => "file", :id => "message_image"}

@@ -19,14 +19,8 @@ $main-font-color: #434A54;
   }
 }
 .header {
-  // background-color: #253141;
-  // position: fixed;
-  // width: 100%;
   height: 100px;
     &__left {
-    // margin-top: 38px;
-    // display: inline-block;
-    // justify-content: space-between;
     background-color: #253141;
     height: 100%;
     width: 300px;
@@ -91,7 +85,6 @@ $main-font-color: #434A54;
 
 .contents {
   height: calc(100vh - 124px);
-  //padding-top: 99px;
   &__side {
     float: left;
     background-color: #2f3e51;
@@ -114,7 +107,6 @@ $main-font-color: #434A54;
         @include side();
       }
     }
-
   }
   &__main {
     height: calc(100vh - 124px) ;
@@ -169,21 +161,11 @@ $main-font-color: #434A54;
           }
         }
         .input-box__text {
-          // position: relative;
           padding-left: 10px;
           height: 50px;
           width: calc(100% - 155px);
         }
-        // .input-box__image {
-        //   top: 500;
-        //   right: 10;
-        //   cursor: pointer;
-        //   input {
-        //     display: none;
-        //   }
-        // }
         .input-box__btn {
-          // display: inline-block;
           margin-right: 40px;
           float: right;
           text-decoration: none;
