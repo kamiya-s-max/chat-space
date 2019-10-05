@@ -26,7 +26,7 @@
       .input-box
         %label.input-box__image(for="message_image")
           %i{class:"fa fa-lg fa-image"}
-          %input.input-box__image-file{:type => "file", :id => "message_image"}
-        %input.input-box__text{:placeholder => "type a message"}
+          %input.input-box__image-file{type: "file", id: "message_image"}
+        %input.input-box__text{placeholder: "type a message"}
         =link_to "", class: "input-box__btn" do
           Send
