@@ -1,0 +1,32 @@
+.flash-box
+  .notice
+    グループを作成しました
+.header
+  = render 'header-left'
+  .header__right
+    .header__right--title
+      max
+    .header__right--text
+      Member : 
+    .header__right--list
+      asd kamiya-s-max
+    =link_to "", class: "header__right--btn" do
+      Edit
+.contents
+  = render 'contents-side'
+  .contents__main
+    .contents__main--body
+      .body--title
+        kamiya-s-max
+      .body--message
+        2019/10/01 (sun) 00:00:00
+      .body--text
+        テスト
+    .contents__main--form
+      .input-box
+        %label.input-box__image(for="message_image")
+          %i{class:"fa fa-lg fa-image"}
+          %input.input-box__image-file{type: "file", id: "message_image"}
+        %input.input-box__text{placeholder: "type a message"}
+        =link_to "", class: "input-box__btn" do
+          Send
