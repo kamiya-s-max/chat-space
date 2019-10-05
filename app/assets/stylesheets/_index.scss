@@ -3,47 +3,57 @@
   color: #FFFFFF;
 }
 
-@mixin clearfix() {
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-
 $main-font-color: #434A54;
 
+* {
+  box-sizing: border-box;
+}
+
+.flash-box {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  width: 100vw;
+  .notice {
+    background-color: #38aef0;
+  }
+}
 .header {
-  background-color: #253141;
-  position: fixed;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  &__left {
+  // background-color: #253141;
+  // position: fixed;
+  // width: 100%;
+  height: 100px;
+    &__left {
+    // margin-top: 38px;
+    // display: inline-block;
+    // justify-content: space-between;
     background-color: #253141;
+    height: 100%;
     width: 300px;
     float: left;
-    margin-top: 38px;
+    @include side;
     &--title {
       display: inline-block;
+      line-height: 100px;
       font-size: 16px;
-      @include side;
       margin-left: 20px;
     }
     &--btn-cog {
+      margin-top: 40px;
       float: right;
       margin-right: 20px;
     }
     &--btn-edit {
+      margin-top: 40px;
       float: right;
       margin-right: 5px;
     }
   }
-  &__right {
+    &__right {
     background-color: white;
     width: calc(100vw - 300px);
-    float: right;
-    border-bottom: solid 1px #eeeeee;
+    float: left;
+    border-bottom: solid 2px #eeeeee;
     position: relative;
     &--title {
       font-size: 20px;
@@ -80,13 +90,14 @@ $main-font-color: #434A54;
 }
 
 .contents {
-  height: 100vh;
-  padding-top: 99px;
+  height: calc(100vh - 124px);
+  //padding-top: 99px;
   &__side {
     float: left;
     background-color: #2f3e51;
-    height: 100%;
+    height: calc(100vh - 124px);
     width: 300px;
+    overflow: scroll;
     &--btn {
       margin: 0 20px;
       float: left;
@@ -106,37 +117,83 @@ $main-font-color: #434A54;
 
   }
   &__main {
-    height: 100%;
+    height: calc(100vh - 124px) ;
     width: calc( 100vw - 300px) ;
     float: right;
     background-color: #fafafa;
+    position: relative;
+    overflow: scroll;
     &--body {
-      padding: 46px 40px 40px 40px;
+      padding: 46px 0 40px 0;
       width: 100%;
-      
-      .body-title {
+      .body--title {
         padding-bottom: 10px;
         font-size: 16px;
         float: left;
         font-weight: bold;
         color: $main-font-color;
-        
+        margin-left: 40px;
       }
-      .body-message {
+      .body--message {
         padding-left: 10px;
         font-size: 12px;
         display: inline-block;
         color: #999999
       }
-      .body-text {
+      .body--text {
         font-size: 14px;
         clear: both;
         float: left;
         color: $main-font-color;
+        margin-left: 40px;
       }
     }
-    .footer {
-      
+    &--form {
+      position: absolute;
+      width: 100%;
+      height: 90px;
+      background-color: #eeeeee;
+      bottom: 0;
+      display: flex;
+      .input-box {
+        margin: auto 0 auto 40px;
+        width: 100%;
+        position: relative;
+        .input-box__image {
+          position: absolute;
+          top: 13px;
+          right: 165px;
+          cursor: pointer;
+          input {
+            display: none;
+          }
+        }
+        .input-box__text {
+          // position: relative;
+          padding-left: 10px;
+          height: 50px;
+          width: calc(100% - 155px);
+        }
+        // .input-box__image {
+        //   top: 500;
+        //   right: 10;
+        //   cursor: pointer;
+        //   input {
+        //     display: none;
+        //   }
+        // }
+        .input-box__btn {
+          // display: inline-block;
+          margin-right: 40px;
+          float: right;
+          text-decoration: none;
+          background-color: #38AEF0;
+          color: white;
+          height: 50px;
+          padding: 0 30px;
+          line-height: 50px;
+        }
+      }
     }
   }
 }

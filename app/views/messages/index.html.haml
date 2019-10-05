@@ -1,3 +1,6 @@
+.flash-box
+  .notice
+    グループを作成しました
 .header
   .header__left
     .header__left--title
@@ -29,31 +32,18 @@
         まだメッセージはありません
   .contents__main
     .contents__main--body
-      .body-title
+      .body--title
         kamiya-s-max
-      .body-message
+      .body--message
         2019/10/01 (sun) 00:00:00
-      .body-text
+      .body--text
         テスト
-    .footer
-      
-
-
-
-
--# .contents
--#   .contents__side
--#     .contents__side--head
--#       .contents__side--head-title
--#       .contents__side--head-btn
--#       .contents__side--head-btn
--#     .contents__side--body
--#       .contents__side--body-btn
--#   .contents__main
--#     .contents__main--body
--#       .contents__main--body-lead
--#       .contents__main--body-text
--#   .contents__bottom
--#     .contents__bottom-form
--#     .contents__bottom-btn-small
--#     .contents__bottom-btn-large
+    .contents__main--form
+      .input-box
+        -# %input.input-box__text{:placeholder => "type a message"}
+        %label.input-box__image(for="message_image")
+          %i{class:"fa fa-lg fa-image"}
+          %input.input-box__image-file{:type => "file", :id => "message_image"}
+        %input.input-box__text{:placeholder => "type a message"}
+        =link_to "", class: "input-box__btn" do
+          Send
