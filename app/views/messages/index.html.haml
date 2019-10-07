@@ -1,19 +1,17 @@
--# .flash-box
--#   .notice
--#     グループを作成しました
 .header
-  = render 'header-left'
-  .header__right
-    .header__right--title
-      max
-    .header__right--text
-      Member : 
-    .header__right--list
-      asd kamiya-s-max
-    =link_to "", class: "header__right--btn" do
-      Edit
+  = render 'shared/header-left'
+  = render 'shared/header__right'
+  -# .header__right
+  -#   .header__right--title
+  -#     max
+  -#   .header__right--text
+  -#     Member : 
+  -#   .header__right--list
+  -#     asd kamiya-s-max
+  -#   =link_to "", class: "header__right--btn" do
+  -#     Edit
 .contents
-  = render 'contents-side'
+  = render 'shared/contents-side'
   .contents__main
     .contents__main--body
       .body--title
