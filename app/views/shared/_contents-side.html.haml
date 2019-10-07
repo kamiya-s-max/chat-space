@@ -1,0 +1,7 @@
+.contents__side
+  - current_user.groups.each do |group|
+    =link_to group_messages_path(group), class: "contents__side--btn" do
+      .message--top
+        = group.name
+      .message--bottom
+        まだメッセージはありません
