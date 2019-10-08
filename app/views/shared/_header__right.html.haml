@@ -1,10 +1,11 @@
 .header__right
   .header__right--title
-    super
+    = @group.name
   .header__right--text
     Member : 
-  .header__right--list
-    asd kamiya-s-max
+  - @members.each do |member|
+    .header__right--list
+      = member.name
   - current_user.groups.each do |group|
     =link_to edit_group_path(group), class: "header__right--btn" do
       Edit

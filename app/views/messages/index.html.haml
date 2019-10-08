@@ -13,18 +13,20 @@
 .contents
   = render 'shared/contents-side'
   .contents__main
-    .contents__main--body
-      .body--title
-        kamiya-s-max
-      .body--message
-        2019/10/01 (sun) 00:00:00
-      .body--text
-        テスト
+    .message-list
+      = render partial: 'message', collection: @messages
+      -# .contents__main--body
+      -#   .body--title
+      -#     kamiya-s-max
+      -#   .body--message
+      -#     2019/10/01 (sun) 00:00:00
+      -#   .body--text
+      -#     テスト
     .contents__main--form
       .input-box
-        %label.input-box__image(for="message_image")
-          %i{class:"fa fa-lg fa-image"}
-          %input.input-box__image-file{type: "file", id: "message_image"}
-        %input.input-box__text{placeholder: "type a message"}
-        =link_to "", class: "input-box__btn" do
-          Send
+        = form_for [@group, @message] do |f|
+          = f.label :image, class: 'input-box__image' do
+            %i{class:"fa fa-lg fa-image"}
+            =f.file_field :image, class: 'input-box__image-file', id: "message_image"
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.submit 'Send', class: 'input-box__btn'

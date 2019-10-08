@@ -18,6 +18,10 @@ $main-font-color: #434A54;
 //     background-color: #38aef0;
 //   }
 // }
+body {
+  height: 100%;
+}
+
 .header {
   height: 100px;
     &__left {
@@ -115,48 +119,58 @@ $main-font-color: #434A54;
     height: calc(100vh - 100px) ;
     width: calc( 100vw - 300px) ;
     float: right;
-    background-color: #fafafa;
+    // background-color: #fafafa;
     position: relative;
-    overflow: scroll;
-    &--body {
-      padding: 46px 0 40px 0;
-      width: 100%;
-      .body--title {
-        padding-bottom: 10px;
-        font-size: 16px;
-        float: left;
-        font-weight: bold;
-        color: $main-font-color;
-        margin-left: 40px;
-      }
-      .body--message {
-        padding-left: 10px;
-        font-size: 12px;
-        display: inline-block;
-        color: #999999
-      }
-      .body--text {
-        font-size: 14px;
-        clear: both;
-        float: left;
-        color: $main-font-color;
-        margin-left: 40px;
+    // overflow: scroll;
+    .message-list {
+      height: calc(100vh - 190px) ;
+      padding: 46px 40px;
+      background-color: #fafafa;
+      overflow: scroll;
+      .message {
+        padding: 46px 0 40px 0;
+        width: 100%;
+        .body--title {
+          padding-bottom: 10px;
+          font-size: 16px;
+          float: left;
+          font-weight: bold;
+          color: $main-font-color;
+          // margin-left: 40px;
+        }
+        .body--message {
+          padding-left: 10px;
+          font-size: 12px;
+          display: inline-block;
+          color: #999999
+        }
+        .body--text {
+          font-size: 14px;
+          clear: both;
+          float: left;
+          color: $main-font-color;
+          // margin-left: 40px;
+        }
       }
     }
     &--form {
       position: absolute;
+      // position: fixed;
       width: 100%;
-      height: 90px;
+      // height: 90px;
       background-color: #eeeeee;
       bottom: 0;
       display: flex;
+      // padding: auto 40px;
       .input-box {
-        margin: auto 0 auto 40px;
+        padding : 20px 40px 20px 40px;
+        // width: calc(100% - 155px);
         width: 100%;
+        height: 90px;
         position: relative;
         .input-box__image {
           position: absolute;
-          top: 13px;
+          top: 33px;
           right: 165px;
           cursor: pointer;
           input {
@@ -166,19 +180,23 @@ $main-font-color: #434A54;
         .input-box__text {
           padding-left: 10px;
           height: 50px;
-          width: calc(100% - 155px);
+          width: calc(100% - 115px);
         }
         .input-box__btn {
-          margin-right: 40px;
+          position: absolute;
+          width: 100px;
           float: right;
+          margin-left: 15px;
           text-decoration: none;
           background-color: #38AEF0;
           color: white;
           height: 50px;
           padding: 0 30px;
           line-height: 50px;
+          bottom: 20px;
+          right: 40px;
         }
       }
-    }
+    }   
   }
 }
