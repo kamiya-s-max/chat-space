@@ -1,11 +1,7 @@
 $(function(){
   function buildHTML(message) {
     function image() {
-      if(message.image != null){
-        return `<img src=${message.image} class="lower-message__image"></img>`
-      } else {
-        return ''
-      }
+      message.image != null ? `<img src=${message.image} class="lower-message__image"></img>`:''
     };
     var html = `<div class="message">
                   <p class="body--title">${message.user_name}</a>
@@ -34,6 +30,7 @@ $(function(){
       $('.message-list').append(html);
       $('.input-box__btn').attr('disabled',false);
       $('.input-box__text').val('');
+      $('#new_message')[0].reset();
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
     })
     .fail(function(){
