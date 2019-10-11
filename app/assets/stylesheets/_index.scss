@@ -89,12 +89,10 @@ body {
 }
 
 .contents {
-  // height: calc(100vh - 124px);
   height: calc(100vh - 100px) ;
   &__side {
     float: left;
     background-color: #2f3e51;
-    // height: calc(100vh - 124px);
     height: calc(100vh - 100px) ;
     width: 300px;
     overflow: scroll;
@@ -116,28 +114,24 @@ body {
     }
   }
   &__main {
-    // height: calc(100vh - 124px) ;
     height: calc(100vh - 100px) ;
     width: calc( 100vw - 300px) ;
     float: right;
-    // background-color: #fafafa;
     position: relative;
-    // overflow: scroll;
     .message-list {
       height: calc(100vh - 190px) ;
       padding: 46px 40px;
       background-color: #fafafa;
       overflow: scroll;
       .message {
-        padding-bottom: 40px;
+        // padding-bottom: 40px;
         width: 100%;
         .body--title {
-          padding-bottom: 10px;
+          margin-bottom: 10px;
           font-size: 16px;
           float: left;
           font-weight: bold;
           color: $main-font-color;
-          // margin-left: 40px;
         }
         .body--message {
           padding-left: 10px;
@@ -146,26 +140,24 @@ body {
           color: #999999
         }
         .body--text {
+          margin-bottom: 10px;
           font-size: 14px;
           clear: both;
           float: left;
           color: $main-font-color;
-          // margin-left: 40px;
+          padding-bottom: 40px;
+          width: 100%;
         }
       }
     }
     &--form {
       position: absolute;
-      // position: fixed;
       width: 100%;
-      // height: 90px;
       background-color: #eeeeee;
       bottom: 0;
       display: flex;
-      // padding: auto 40px;
       .input-box {
         padding : 20px 40px 20px 40px;
-        // width: calc(100% - 155px);
         width: 100%;
         height: 90px;
         position: relative;

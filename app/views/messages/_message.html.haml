@@ -1,12 +1,8 @@
--# .contents__main--body
 .message
   .body--title
-    -# kamiya-s-max
     = message.user.name
   .body--message
-    -# 2019/10/01 (sun) 00:00:00
     = message.created_at.strftime("%Y/%m/%d %H:%M")
-  
   - if message.content.present?
     %p.body--text
       = message.content
