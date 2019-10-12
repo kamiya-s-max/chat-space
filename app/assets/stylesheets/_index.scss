@@ -124,28 +124,37 @@ body {
       background-color: #fafafa;
       overflow: scroll;
       .message {
-        // padding-bottom: 40px;
+        padding-bottom: 40px;
         width: 100%;
-        .body--title {
+        .upper_message {
           margin-bottom: 10px;
-          font-size: 16px;
-          float: left;
-          font-weight: bold;
-          color: $main-font-color;
-        }
-        .body--message {
-          padding-left: 10px;
-          font-size: 12px;
-          display: inline-block;
-          color: #999999
+          .body--title {
+            // margin-bottom: 10px;
+            font-size: 16px;
+            float: left;
+            font-weight: bold;
+            color: $main-font-color;
+          }
+          .body--message {
+            padding-left: 10px;
+            font-size: 12px;
+            display: inline-block;
+            color: #999999
+          }
+          // .body--text {
+          //   font-size: 14px;
+          //   clear: both;
+          //   float: left;
+          //   color: $main-font-color;
+          //   width: 100%;
+          // }
         }
         .body--text {
           margin-bottom: 10px;
           font-size: 14px;
           clear: both;
-          float: left;
           color: $main-font-color;
-          padding-bottom: 40px;
+          // padding-bottom: 40px;
           width: 100%;
         }
       }

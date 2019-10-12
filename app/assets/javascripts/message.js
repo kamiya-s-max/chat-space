@@ -2,12 +2,14 @@ $(function(){
   function buildHTML(message) {
     var image = (message.image) ? `<img src=${message.image} class="lower-message__image">`:'';
     var html = `<div class="message">
-                  <p class="body--title">${message.user_name}</a>
-                  <div class="body--message">
-                    ${message.date}
-                  </div>
+                  <div class="upper_message">
+                    <p class="body--title">${message.user_name}</a>
+                    <div class="body--message">
+                      ${message.date}
+                    </div>
                   <p class="body--text">${message.content}</p>
-                  ${image}
+                    ${image}
+                  </div>
                 </div>`
     return html;
   }

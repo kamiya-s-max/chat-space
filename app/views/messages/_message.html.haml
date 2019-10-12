@@ -1,8 +1,9 @@
 .message
-  .body--title
-    = message.user.name
-  .body--message
-    = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .upper_message
+    .body--title
+      = message.user.name
+    .body--message
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
   - if message.content.present?
     %p.body--text
       = message.content
