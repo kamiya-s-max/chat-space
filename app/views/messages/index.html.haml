@@ -1,27 +1,11 @@
 .header
   = render 'shared/header-left'
   = render 'shared/header__right'
-  -# .header__right
-  -#   .header__right--title
-  -#     max
-  -#   .header__right--text
-  -#     Member : 
-  -#   .header__right--list
-  -#     asd kamiya-s-max
-  -#   =link_to "", class: "header__right--btn" do
-  -#     Edit
 .contents
   = render 'shared/contents-side'
   .contents__main
     .message-list
       = render partial: 'message', collection: @messages
-      -# .contents__main--body
-      -#   .body--title
-      -#     kamiya-s-max
-      -#   .body--message
-      -#     2019/10/01 (sun) 00:00:00
-      -#   .body--text
-      -#     テスト
     .contents__main--form
       .input-box
         = form_for [@group, @message] do |f|
