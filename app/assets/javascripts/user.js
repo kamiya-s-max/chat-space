@@ -17,7 +17,7 @@ $(function(){
   }
   function appendErrMsgToHTML(msg){    
     var html = `<div class="chat-group-user clearfix">
-                    <p class="chat-group-user__name">${msg}</p>
+                  <p class="chat-group-user__name">${msg}</p>
                 </div>`;
     search_list.append(html);
   }
@@ -41,18 +41,15 @@ $(function(){
       dataType: 'json'
     })
     .done(function(users){
-      if (input.length === 0){
-        $('#user-search-result').empty();
-      }
-      else if(input.length !== 0){
+      if(input.length !== 0){
         $('#user-search-result').empty();
         users.forEach(function(users){
           appendUser(users)
         });
       }
       else {
-        $('user-search-result').empty();
-        appendErrMsgToHTML("ユーザーが見つかりません")
+        $('#user-search-result').empty();
+        appendErrMsgToHTML("ユーザーが見つかりません");
       } 
     })
     .fail(function(){
