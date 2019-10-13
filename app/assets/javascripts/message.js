@@ -31,9 +31,8 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.message-list').append(html);
-      $('.input-box__btn').attr('disabled',false);
-      $('.input-box__text').val('');
       $('#new_message')[0].reset();
+      $('.input-box__btn').attr('disabled',false);
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
     })
     .fail(function(){
