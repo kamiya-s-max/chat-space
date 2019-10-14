@@ -8,9 +8,9 @@ $(function(){
                     <div class="body--message">
                       ${message.date}
                     </div>
-                  ${content}
-                    ${image}
+                  ${content}                
                   </div>
+                  ${image}
                 </div>`
     return html;
   }
